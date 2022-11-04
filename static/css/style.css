@@ -50,6 +50,7 @@ body {
 }
 
 .author {
+    background-color: #00ddff;
     color: white;
     margin: 4px;
     text-transform: uppercase;
