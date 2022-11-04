@@ -102,6 +102,7 @@ class CreatePostView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
 
 
 class UpdatePostView(UserPassesTestMixin, LoginRequiredMixin, SuccessMessageMixin, UpdateView):
+    """ If user is logged can update a post """
 
     model = Post
     template_name = "add_post.html"
@@ -124,6 +125,8 @@ class UpdatePostView(UserPassesTestMixin, LoginRequiredMixin, SuccessMessageMixi
     # Delete a Post
 
 class DeletePostView(UserPassesTestMixin, LoginRequiredMixin, SuccessMessageMixin, DeleteView):
+    """ If user is logged can delete a his post """
+    
     model = Post
     success_url = reverse_lazy('home')
     success_message = ("Your Post has been deleted")
