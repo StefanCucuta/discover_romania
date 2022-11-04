@@ -1,3 +1,5 @@
+
+
 {% extends 'base.html' %} {% block content %}
 {% load crispy_forms_tags %}
 
@@ -39,7 +41,9 @@
 
                     <div class="col-1">
                         <!-- The number of likes goes before the closing strong tag -->
-                        <strong class="text-secondary"><i class="far fa-heart"></i> {{ post.number_of_likes }} </strong>
+                        <form action="{% url 'post_like' post.slug %}" method='POST'> {% csrf_token %}
+                        <button style = "border:none;" type = "submit"><strong class="text-secondary"><i class="far fa-heart"></i> {{ post.number_of_likes }} </strong></button>
+                        </form>
                     </div>
                     <div class="col-1">
                         {% with comments.count as total_comments %}
