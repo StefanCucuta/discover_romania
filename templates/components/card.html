@@ -1,0 +1,30 @@
+<div class="col-md-4">
+    <div class="card mb-4 h-100">
+        <div class="card-body">
+            <div class="image-container">
+                {% if "placeholder" in post.featured_image.url %}
+                <img class="card-img-top"
+                    src="https://res.cloudinary.com/mariuscloud/image/upload/v1652890490/media/Barcelona_klcizi.jpg"
+                    alt="placeholder image">
+                {% else %}
+                <img class="card-img-top" src=" {{ post.featured_image.url }}"
+                    alt="imige of {{ post.title }} ">
+                {% endif %}
+                <div class="image-flash">
+                    <p class="author">Author: {{ post.author }}</p>
+                </div>
+            </div>
+            <div class="card-footer">
+                <a href="{% url 'post_detail' post.slug  %}" class="post-link">
+                    <h2 class="card-title">{{ post.title }}</h2>
+                    <p class="card-text">{{ post.excerpt }}</p>
+                </a>
+
+                <p class="card-text text-muted h6">{{ post.created_on}}
+                    <i class="far fa-heart"></i>
+                    {{ post.number_of_likes }}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
