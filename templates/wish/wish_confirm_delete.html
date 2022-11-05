@@ -1,0 +1,13 @@
+{% comment %} {% extends 'base.html' %}
+{% block content %}
+
+<h1 class="text-center">Are you sure you wa to delete this wish ?
+    <div class="container mt-5 col-6">    
+        <form method="POST">
+        {% csrf_token %}
+        {{form}}
+        <button class="btn btn-danger mx-3" type="submit">Yes</button>
+        <class="btn btn-primary" href="{% url 'wish_create' %}">No</a>
+    </form>
+</div>
+{% endblock content %} {% endcomment %}

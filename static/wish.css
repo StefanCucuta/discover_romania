@@ -1,0 +1,12 @@
+.striker{
+    text-decoration: line-through;
+}
+
+.wish-table {
+    margin: 0 auto;
+    padding: 50px 50px 0 50px;
+}
+
+.wish-table:last-child {
+    padding: 50px;
+}

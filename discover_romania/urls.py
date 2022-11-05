@@ -1,9 +1,5 @@
 from django.contrib import admin
 from django.urls import path, include
-# from wish import views
-
-# from django.conf import settings
-# from django.conf.urls import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),

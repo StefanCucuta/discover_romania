@@ -2,38 +2,78 @@
 {% load static %}
 {% block content %}
 
-<div class="container col-5 mt-3 justify-center">
-    <h1 class="text-center">{{user.username}}Wish</h1>
-    <div class="container col-8 mt-5 justify-center">
-        <form  method="POST">
-            {% csrf_token %}
-            <input type="text" name="wish"
-            class="form-control-sm mr-2"
-            placeholder="Wish place to visit"required>
-            <button type="submit" class="btn btn-primary btn-sm">Add Place </button>        
-        </form>
-    </div>
-</div>
 
-<div class="d-flex justify-content-center">
-    <section class="col-12">
-        {% if wish %}
-<ul class="list-group col-6 mt-3">
-        {% for wish in wishes %}
-        <li class="mb-2 list-group-item d-flex justify-content-between align-items-center">
-            <p>{{wish.body}}</p>
-            <div>
-                <a href="{% url 'update_wish' wish.pk %}"
-                class="btn btn-small btn-success">Update</a>
-                <a href="{% url 'delete_wish' wish.pk %}"
-                class="btn btn-small btn-primary">Delete</a>
-            </div>
-        </li>
-        {% endfor %}
-      </ul>
-      {% else %}
-      <p class="mt-3" align="center">Add your place to visit in your bucket list</p>
-    {% endif %}
-  </section>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href=""> Your Next Destination Wish</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+
+ </ul>
+    <form class="form-inline my-2 my-lg-0" method ="POST">
+      {% csrf_token %}
+      <input class="form-control mr-sm-2" type="search" placeholder="Add Location" aria-label="Search" name="item">
+      <br>
+      <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Add to list</button>
+    </form>
+  </div>
+</nav>
+
+
+{% if messages %}
+{% for messages in messages %}
+
+{% comment %} <div class="alert alert-warning alert-dissable" role="alert">
+    <button class="close" data-dismiss="alert"> {% endcomment %}
+        <small><sup>{{ message }}</sup></small>
+    {% comment %} </button>
+    {{ message }} {% endcomment %}
+
 </div>
- {% endblock  content %}
+{% endfor %}
+{% endif %}
+
+{% if my_items %}
+<div class="wish-table">
+  <h3>My Wishlist</h3>
+  <table class ="table table-bordered">
+  {% for things in my_items %}
+    {% if  things.completed %}
+      <tr>
+        <td class ="table-success">{{ things.item }}</td> 
+        <td class ="table-success"><center><a href="{% url 'uncross' things.id %}">Uncross</a></center></td>
+        <td class ="table-success"><center><a href="{% url 'delete' things.id %}">Delete</a></center></td>
+        <td class ="table-success"><center>{{things.author}}</center></td>
+      </tr>
+    {% else %}
+      <tr class="table-secondary">
+          <td>{{ things.item }}</td> 
+          <td><center><a href="{% url 'cross_off' things.id %}">Cross Off</a></center></td>
+          <td><center><a href="{% url 'delete' things.id %}">Delete</a></center></td>
+          <td><center>{{things.author}}</center></td>
+      </tr>
+    {% endif %}
+  {% endfor %}
+  </table>
+</div>
+{% endif %}
+
+{% if all_items %}
+<div class="wish-table">
+  <h3>Other Wishlists</h3>
+  <table class ="table table-bordered">
+  {% for things in all_items %}
+    <tr>
+      <td class ="stricker">{{ things.item }}</td> 
+      <td>{% if  things.completed %}Completed{% else %}Not completed{% endif %}</td>
+      <td><center>{{things.author}}</center></td>
+    </tr>
+  {% endfor %}
+  </table>
+</div>
+{% endif %}
+
+{% endblock %}
