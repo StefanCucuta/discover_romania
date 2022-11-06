@@ -14,8 +14,6 @@ import os
 from pathlib import Path
 from django.contrib.messages import constants as messages
 import dj_database_url
-if os.path.isfile('env.py'):
-    import env
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -57,7 +55,6 @@ INSTALLED_APPS = [
     'crispy_forms',
     'blog',
     'wish',
-    'contact',
 ]
 
 SITE_ID = 1

@@ -110,11 +110,9 @@ class UpdatePostView(UserPassesTestMixin, LoginRequiredMixin, SuccessMessageMixi
     success_url = reverse_lazy('home')
     success_message = ("Your Post has been updated")
 
-
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
-
 
     def test_func(self):
         post = self.get_object()

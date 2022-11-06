@@ -9,9 +9,13 @@ body {
     color: #1B262c;
 }
 
-#contact {
-    padding-top: 100px;
+form {
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
 }
+
 
 .btn-default {
     color: #000000;
@@ -90,7 +94,7 @@ body {
     right: 90%;
     height: 100%;
     width: 150%;
-    background: #445261;
+    background: #8bfccf;
     -webkit-transform: skew(15deg);
     -moz-transform: skew(15deg);
     transform: skew(15deg);
@@ -113,7 +117,7 @@ body {
     margin-left: 5%;
 }
 .post-title:hover{
-    color:#213E31;
+    color:#000000;
 }
 
 .post-subtitle {
@@ -134,7 +138,7 @@ body {
 
 .link:hover,
 .link:active {
-    color: #445261;
+    color: #000000;
     text-decoration: underline;
 }
 
@@ -154,23 +158,23 @@ body {
 /* Sign In / Out page*/
 
 .signout {
-    background-color: #897B70;
+    background-color: #f5df11;
     padding-bottom: 9rem;
-    border: 4px solid #1B262c;
+    border: 4px solid #000000;
     text-align: center;
 }
 
 .signin {
-    background-color: #897B70;
+    background-color: #f5df11;
     padding-bottom: 3rem;
-    border: 4px solid #1B262c;
+    border: 4px solid #000000;
     text-align: center;
 }
 
 /* Header h1 */
 .header{
     font-weight:bold;
-    color: #1B262c;
+    color: #000000;
     text-align: center;
 }
 
@@ -180,14 +184,14 @@ body {
     font-weight:bold;
 }
 .navbar-light .navbar-nav .nav-link.active{
-    color: #EEF0F4;
+    color: #000000;
 }
 .navbar-light .navbar-nav .nav-link {
-    color:#ebe5e1;
+    color:#000000;
 }
 .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
     font-size:17px;
-    color:rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
 }
 
 .social-networks a {
@@ -200,5 +204,5 @@ body {
 }
 
 .text-muted{
-    color:#4a5055 !important;
+    color:#ff0000 !important;
 }
