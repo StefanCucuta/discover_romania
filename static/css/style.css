@@ -9,6 +9,13 @@ body {
     color: #1B262c;
 }
 
+#contact {
+    padding-top: 100px;
+}
+
+.btn-default {
+    color: #000000;
+}
 
 .thin {
     font-weight:300;
