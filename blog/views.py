@@ -77,7 +77,7 @@ class PostLike(View):
         if post.likes.filter(id=request.user.id).exists():
             post.likes.remove(request.user)
         else:
-            post.likes.add(request.user)
+            post.likes.add(request.user.id)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
