@@ -1,6 +1,5 @@
 from django.contrib import admin
 from django.urls import path, include
-from django.conf.urls.static import static
 handler404 = 'discover_romania.views.handler404'
 
 urlpatterns = [
