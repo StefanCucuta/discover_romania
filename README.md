@@ -370,21 +370,21 @@
 
 - Images and video used were taken from :
 
-- [Logo - photo]( )
-  
-- []()
-  
-- []()
-  
-- [](/)
- 
-- [ ]()
+- [Sinaia - Castel](https://www.youtube.com/watch?v=cQ4KnLvzDOA)
 
-- []()
+- [Logo - Canva](https://www.canva.com/design/DAFQ-kYMDZc/by3FbgyNcyNRf2zkiwYa0Q/edit )
   
-- []()
+- [Sinaia](https://www.rjontour.com/wp-content/uploads/2021/06/Peles-Castle-in-Sinaia-1024x768.jpg)
   
-- []()
+- [Timisoara](https://cdn.theculturetrip.com/wp-content/uploads/2017/08/rsz_stefan_munder.jpg)
+  
+- [Bucarest](https://www.locurifaine.ro/wp-content/uploads/2021/07/Muzee-Bucuresti.jpg)
+ 
+- [Ceahlau Montains ](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Ceahlau_2.jpg/1200px-Ceahlau_2.jpg)
+
+- [Bucegi Montains](https://aventurainromania.ro/wp-content/uploads/2017/11/Sfinxul-din-Bucegi.jpg)
+  
+- [Dracula's Castel](https://1.bp.blogspot.com/-ZCHyJmklCJ8/YRMG5ed4tCI/AAAAAAAARao/xpBvfK7x0REB1wbikPIVzHbQRg507qpBQCNcBGAsYHQ/s1000/bran-castle-dracula-castle.jpg)
 
 - All images have been resized and compressed in order to boost the UX flow.
 
