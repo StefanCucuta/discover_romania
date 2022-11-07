@@ -8,7 +8,7 @@ Django==3.2.3
 django-allauth==0.50.0
 django-crispy-forms==1.14.0
 django-summernote==0.8.20.0
-gunicorn==20.1.0
+gunicorn==20.0.4
 lxml==4.9.1
 Markdown==3.4.1
 oauthlib==3.2.2
