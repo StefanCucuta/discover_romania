@@ -34,7 +34,7 @@ DEBUG = True
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['discover-romania.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['discover-ro.herokuapp.com', 'localhost']
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
@@ -109,12 +109,17 @@ WSGI_APPLICATION = 'discover_romania.wsgi.application'
 Database
 https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
 
 

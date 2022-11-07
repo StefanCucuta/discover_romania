@@ -1,1 +1,1 @@
-web:gunicorn discover_romania.wsgi
+web: gunicorn discover_romania.wsgi:application
