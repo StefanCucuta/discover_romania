@@ -1,108 +1,404 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+![](screenshot/responsive.PNG)
 
-Welcome Stefan Cucuta,
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+**[LIVE DEMO - Click Here]()**
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
 
-## Gitpod Reminders
+# Table of Contents
+- [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [UX](#ux)
+    - [User Stories](#user-stories)
+    - [Strategy](#strategy)
+    - [Scope](#scope)
+    - [Features](#features)
+      - [Existing Features (Photo Links)](#existing-features-photo-links)
+      - [Homepage](#homepage)
+      - [Navbar](#navbar)
+      - [Login](#login)
+      - [Logout](#logout)
+      - [Posts](#posts)
+      - [Register as a User](#register-as-a-user)
+      - [Upload New Post](#upload-new-post)
+      - [Update a Post](#update-a-post)
+      - [Comments](#comments)
+      - [Wish list](#wish-list)
+      - [Site Admin Panel](#site-admin-panel)
+      - [Future Features](#future-features)
+      - [Footer](#footer)
+    - [Structure](#structure)
+      - [Colour Palette](#colour-palette)
+    - [Skeleton](#skeleton)
+      - [Wireframes](#wireframes)
+      - [Mobile](#mobile)
+      - [Desktop](#desktop)
+      - [Technology Used](#technology-used)
+        - [Programming Languages](#programming-languages)
+      - [Frameworks, Libraries \& Programs Used](#frameworks-libraries--programs-used)
+    - [Testing](#testing)
+      - [Testing User Stories from User Experience (UX) Section](#testing-user-stories-from-user-experience-ux-section)
+      - [Functionality Testing](#functionality-testing)
+    - [Deployment](#deployment)
+      - [Deploy to Heroku](#deploy-to-heroku)
+    - [Credits](#credits)
+      - [Media](#media)
+      - [Images, Logo and Video](#images-logo-and-video)
+      - [Code](#code)
+      - [Acknowledgements](#acknowledgements)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
-`python3 -m http.server`
+  ## Introduction
+  This is a community Discover Romania Blog website that promotes Romanian places and encourage people to share their storyes and to create bucket lists. 
 
-A blue button should appear to click: _Make Public_,
+  ## UX
+  ### User Stories 
+  - As a site User I can : 
+    - register an account so that I can comment and interact with the posts
+    - be involved in the conversation when I leave comments on posts
+    - read full text when I am pressing on post
+    - select one post from the list with all posts
+    - like a post and interact with the post 
+    - view a paginated list of posts so that easily select a post to view
+    - update my profile so that other users can view my details
+    - create draft posts and writing the content later
+    - create wish list in bucket list 
+    - I can see my and other users wish list in bucket list 
+    - make changes to the post by editing the post
+    - remove / delete my post if I want
+    - remove / delete a comments from posts if I want
+    - upload photos to my posts
+  - As a site Admin I can : 
+    - edit posts so that I can make changes to the post
+    - confirm to users that the post is waiting approval
+    - filter, approve or disapprove comments and posts
+    - manage my blog content by creating ,reading,updating and deleting posts
+    - manage and interact with the blog content as a superuser 
+  - As a User/Admin I can :
+    - read conversations and view comments on individual post
+    - view the number of likes on individual post and see which is the most popular
+  
 
-Another blue button should appear to click: _Open Browser_.
+  ### Strategy 
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+- This is a website where users that love to travel can share photos and stories : 
+   - users that want to travel in Romania
+   - users that travelled already
+  
+  ### Scope 
 
-A blue button should appear to click: _Make Public_,
+  - The website provides for the user an easy navigation , photos and content with regards to location from the photos.
 
-Another blue button should appear to click: _Open Browser_.
+  ### Features
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+  
+  #### Existing Features (Photo Links)
 
-To log into the Heroku toolbelt CLI:
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+  #### Homepage 
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+  - Hompage displays the Navbar and logo, posts with description and footer with social network links.
+  
+     [Hompage - photo 1](screenshot/home_page1.PNG)
 
-------
+     [Hompage - photo 2](screenshot/home_page2.PNG)
 
-## Release History
+  #### Navbar
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+  - In loading mode Navar displays : Home, Register and Login
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+     [Navbar Logged Out - photo ](screenshot/navbar_1.PNG)
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+  - In user logged mode Navar displays : Home, Logout and Add Post
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+     [Navbar Logged In - photo ](screenshot/navbar_2.PNG)
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+  #### Login
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+  - When a user presses the Login link a new section will apear at the bottom of the page where he can insert his  account details.
+  
+     [Login - photo ](screenshot/sign_in.PNG)
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+  #### Logout
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+  - When a user presses the Logout link a new section will apear at the bottom of the page where he is asked to confirm his action by pressing the Sign Out button .
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+     [Logout - photo ](screenshot/sign_out.PNG)
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+  #### Posts
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+  - There are 6 post with short content  displayed on the home page 
+  - When users are adding more posts a new page will be available by pressing the Next button at the bottom of the page.
+  - Confirm to users with a message that the post is waiting approval from the admin.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+     [Blog Cards - photo ](screenshot/blog_cards.PNG)
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+  #### Register as a User
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+  - When a user presses the Register link a new section will appear at the bottom of the page where is asked to introduce their ditails.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+     [Register as User - photo ](screenshot/register.PNG)
 
-------
+  #### Upload New Post
 
-## FAQ about the uptime script
+  - When a user decide to upload a new post with content and press the New post link a a new section will appear at the bottom of the page where is asked to introduce the content , to upload a photo and press the New Post button to send the post to be approved by the admin.
+  - If a photo will not be uploaded a default photo (logo will appear instead).
 
-**Why have you added this script?**
+     [Upload New Post - photo ](screenshot/new_post.PNG)
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+  #### Update a Post
 
-**How will this affect me?**
+  - When a user decide to update a post uploaded by himself and press the chosen post a new page will appear where is asked to choose to update or delete the post.
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+     [Update a Post - photo ](screenshot/update_post.PNG)
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+  #### Comments
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+  - When a user decide to comment a post and press the chosen post a new page will appear where has only the option to add a comment to the post.
 
-**So….?**
+     [Comments Section - photo ](screenshot/comments.PNG)
+  
+  #### Wish list
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+  - When a user decide to add a place where he want to go and to see othes wish list is pressing on Bucket list in the navbar.
 
-**Can I opt out?**
+     [Comments Section - photo ](screenshot/wish.PNG)
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+  #### Site Admin Panel
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+  - As a site Admin : 
+    - I can approve or dissapprove comments or post.
+    - I can create drafts and continue to add content later to the posts
+    - I can edit and make changes to posts
 
-**Anything more?**
+     [Admin Page - photo ](screenshot/admin.PNG)
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+  #### Future Features 
 
----
+  - User profile
+  - Google map - location of the post
+  - Link location to Trip Advisor
+  - Link location to Skyscanner to book a trip.
 
-Happy coding!
+  #### Footer
+
+  - The footer shows the social network links and Copy Rights 
+  
+     [Footer - photo ](screenshot/footer.)
+
+
+  ### Structure
+
+  - Navbar is fixed on top to facilitate users to scroll the page 
+  and  also have the possibility to access the links in the navbar
+  - On small screens  a dropdown menu navigation will be available on all pages
+  - The pages have a straightforward layout in place to ensure users can navigate easily.
+    
+  #### Colour Palette
+ -  [Abode Color]( https://color.adobe.com/search?q=897B70&t=hex) was used to extract the main colours for the website:
+  
+    ![](screenshot/colors.PNG)
+
+  ### Skeleton
+  - Wireframes created with Balsamiq
+  - The project was developed from initial wireframes, and some modifications were made during the development process in response to user feedback.
+
+  #### Wireframes
+
+  <details>
+
+  <summary>Click to see the Wireframes</summary>
+
+  #### Mobile
+
+
+  ![Mobile](wireframes/mobile_home.PNG)
+
+  ![Mobile](wireframes/mobile_newpost.PNG)
+
+  ![Mobile](wireframes/mobile_register.PNG)
+
+  ![Mobile](wireframes/mobile_signin.PNG)
+
+  ![Mobile](wireframes/mobile_signout.PNG)
+
+  #### Desktop
+
+  ![Desktop](wireframes/desk_signout.PNG)
+
+  ![Desktop](wireframes/desk_signin.PNG)
+
+  ![Desktop](wireframes/desk_register.PNG)
+
+  ![Desktop](wireframes/desk_hompage.PNG)
+  
+  ![Desktop](wireframes/desk_newpost.PNG)
+
+  </details>
+
+
+  
+  #### Technology Used
+
+  ##### Programming Languages 
+
+  - Python
+  - HTML
+  - CSS
+  
+  #### Frameworks, Libraries & Programs Used
+
+  - [Balsamiq](https://balsamiq.cloud/) - Was used to create the wireframes
+  - [Bootstrap](https://getbootstrap.com/) - Was used to contribute to responsiveness and styling of the site
+  - [TinyJPG](https://tinyjpg.com/) - Was used to compress images before uploading
+  - [GitHub](https://github.com/) - Holds the repository of my project, GitHub connects to GitPod and Heroku
+  - [GitPod](https://gitpod.io/) - Connected to GitHub, GitPod hosted the coding space,
+   allowing the project to be built and then committed to the GitHub repository.
+  - [Heroku](https://heroku.com/) - Connected to the GitHub repository, Heroku is a cloud application platform used 
+   to deploy this project so the backend language can be utilised/tested.
+  - [Django](https://www.djangoproject.com/) - This framework was used to build the foundations of this project
+  - [Gunicorn](https://gunicorn.org/) - Gunicorn is a pure-Python HTTP server for WSGI applications.
+  - [DjDatabaseURL](https://pypi.org/project/dj-database-url/) - This allows you to utilize the 12factor inspired DATABASE_URL 
+   environment variable to configure your Django application.
+  - [Cloudinary](https://cloudinary.com/) - Used to store images online for the recipe posts.
+  - [Summernote](https://summernote.org/) - Used to add a text area field to the admin setup to enable 
+   a list of ingredients and method steps.
+  - [GoogleFonts](https://fonts.google.com/) - Provide fonts for the website.
+  - [FontAwesome](https://fontawesome.com/) - Was used for icons.
+  - [AmIResponsive](https://ui.dev/amiresponsive) - To check if the site is responsive on different screen sizes.
+  - [Pixabay](https://pixabay.com/) and [Pexel](https://www.pexels.com/) - Were used for all the images.
+  - [W3CMarkupValidator](https://jigsaw.w3.org/) - Was used to validate HTML.
+  - [Coolors](https://coolors.co/) - To make color palette
+
+
+  ### Testing
+  - The project was manually tested by fallowing the steps :
+    - Code was run trough the validator resulting no issues
+    - Deploying the project from gitpod workspace trough Heroku
+    - The site was also tested on I-Pad , I-Phone and Laptop.
+  
+  #### Testing User Stories from User Experience (UX) Section
+
+  - All user stories in the list [above](#user-stories) has been tested and confirmed after implementation.
+  #### Functionality Testing 
+
+   - Lighthouse 
+  
+  ![](screenshot/accessibility.PNG)
+
+  * HTML
+  
+    - No errors were returned when passing through the official [w3c html validator](https://validator.w3.org/).
+  
+  ![](screenshot/w3errors2.PNG)
+
+  * CSS
+  
+    - No errors were returned when passing through the official [w3c jigsaw validator](https://jigsaw.w3.org/css-validator/).
+  
+  ![](screenshot/css_validator.PNG)
+
+  * Accessability
+
+    - Accessibility was tested with both Chrome Lighthouse [a11y contrast checker](https://color.a11y.com/)  and no issues were found.
+    
+   ![](screenshot/contrast.PNG)
+
+
+  * PEP8 - No bugs found
+
+  <details>
+  <summary>Click to see the Screenshots</summary>
+
+  ![](screenshot/pep81.PNG)
+
+  ![](screenshot/pep82.PNG)
+
+  ![](screenshot/pep38.PNG)
+  
+  </details>
+
+
+
+
+  ### Deployment
+
+  #### Deploy to Heroku 
+
+  - To deploy this page to Heroku from its GitHub repository, the following steps were taken:
+  
+    - Start by installing everything in the requirements.txt file.
+    - You should have the corect requirements.txt and Procfile before moving on with the deployment.
+    - Log in to [Heroku apps](https://heroku.com/)
+    - On Heroku page go to dashboard then to the "New" menu and choose "Create new app"
+    - Create a unique name for your app , select your region and click "Create app".
+    - Now the new app's dashboard is opened. Click on the resources tab.
+    - Add the Heroku Postgres Add-on.
+    - Go to the settings tab and reveal the Config Vars and add :
+      - CLOUDINARY_URL
+      - DATABASE_URL
+      - SECRET_KEY
+    - Click on "Deploy" and select your deploy method and repository.
+    - Click "Connect" on selected repository
+    - Click "Deploy Branch" in the manual deploy section. -> Heroku will now deploy the App.
+  
+   - Development Environment
+  
+    - Create an env.py that contains these variables :
+      - os.environ["DATABASE_URL"] = "postgres://....."
+      - os.environ["SECRET_KEY"] = ".."
+      - os.environ["CLOUDINARY_CLOUD_NAME"] = ".."
+      - os.environ["CLOUDINARY_API_KEY"] = ".."
+      - os.environ["CLOUDINARY_API_SECRET"] = ".."
+      - os.environ["CLOUDINARY_URL"] = ".."
+      - os.environ["DEVELOPMENT"] = "True"
+       
+  
+   - Create requirements.txt by typing in terminal :
+      - pip3 freeze --local > requirements.txt
+
+
+  ### Credits
+
+ - [Code Institute](https://codeinstitute.net/ie/) - 'I think therefore I blog' project helped me with the fundation of the website
+ - Icons were taken from Font Awesome
+ - Images and video where taken from Pexel and Pixbay
+ - Informational text was taken from Google
+  
+  #### Media
+
+  #### Images, Logo and Video
+
+- Images and video used were taken from :
+
+- [Logo - photo]( )
+  
+- []()
+  
+- []()
+  
+- [](/)
+ 
+- [ ]()
+
+- []()
+  
+- []()
+  
+- []()
+
+- All images have been resized and compressed in order to boost the UX flow.
+
+  
+#### Code
+
+- [I Think Therefore I Blog ](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/fe4299adcd6743328183aab4e7ec5d13/) by Code Institute as a general resource.
+
+- [Codegrepper](https://www.codegrepper.com/code-examples/python/jinja+get+current+url+django) as a general resource.
+
+- [W3School](https://www.w3schools.com/) as a general resource.
+
+#### Acknowledgements
+
+- As usual the Slack crowd can't be thanked enough.
+
+  [Back to the top](#table-of-contents)

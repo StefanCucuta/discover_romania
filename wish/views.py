@@ -3,6 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import redirect, render
 from django.db.models import Q
 
+from django.http import HttpResponse
 from .forms import WishForm
 from .models import Wish
 
@@ -10,7 +11,7 @@ from .models import Wish
 @login_required
 def create_wish(request):
     if request.method == 'POST':
-        form = WishForm(request.POST or None)
+        form = WishForm(request.POST)
 
         if form.is_valid():
             wish = form.save(commit=False)
@@ -66,3 +67,6 @@ def uncross(request, wish_id):
             'You are not allowed to'
             'change other user\'s wishes'))
     return redirect('wish_create')
+
+
+

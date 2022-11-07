@@ -9,13 +9,6 @@ body {
     color: #1B262c;
 }
 
-form {
-    padding-top: 30px;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-bottom: 50px;
-}
-
 
 .btn-default {
     color: #000000;
@@ -30,7 +23,7 @@ form {
 } 
 
 .dark-bg {
-    background-color: #445261;
+    background-color: #000000;
 } 
 
 .main-bg {
@@ -196,11 +189,11 @@ form {
 
 .social-networks a {
     font-size:17px;
-    color:#EEF0F4;
+    color:#000000;
 }
 .social-networks a:hover {
     font-size:20px;
-    color:aqua;
+    color:rgb(255, 0, 0);
 }
 
 .text-muted{
