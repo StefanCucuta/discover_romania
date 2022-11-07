@@ -3,7 +3,6 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import redirect, render
 from django.db.models import Q
 
-from django.http import HttpResponse
 from .forms import WishForm
 from .models import Wish
 
@@ -11,7 +10,7 @@ from .models import Wish
 @login_required
 def create_wish(request):
     if request.method == 'POST':
-        form = WishForm(request.POST)
+        form = WishForm(request.POST or None)
 
         if form.is_valid():
             wish = form.save(commit=False)
@@ -19,9 +18,7 @@ def create_wish(request):
             wish.save()
             my_items = Wish.objects.filter(author=request.user)
             all_items = Wish.objects.filter(~Q(author=request.user))
-            messages.success(request, (
-               "Your location that you want to "
-               "visit has been added to List !"))
+            messages.success(request, ("Your location that you want to visit has been added to List !"))
             return render(request, "wish/wish.html", {'all_items': all_items, 'my_items': my_items})
 
     else:
@@ -37,9 +34,7 @@ def delete(request, wish_id):
         item.delete()
         messages.success(request, ('Location Has Been Deleted !'))
     else:
-        messages.error(request, (
-            'You are not allowed to '
-            'delete other user\'s wishes'))
+        messages.error(request, ('You are not allowed to delete other user\'s wishes'))
     return redirect('wish_create')
 
 
@@ -50,9 +45,7 @@ def cross_off(request, wish_id):
         item.completed = True
         item.save()
     else:
-        messages.error(request, (
-            'You are not allowed to '
-            ' change other user\'s wishes'))
+        messages.error(request, ('You are not allowed to change other user\'s wishes'))
     return redirect('wish_create')
 
 
@@ -63,10 +56,5 @@ def uncross(request, wish_id):
         item.completed = False
         item.save()
     else:
-        messages.error(request, (
-            'You are not allowed to'
-            'change other user\'s wishes'))
+        messages.error(request, ('You are not allowed to change other user\'s wishes'))
     return redirect('wish_create')
-
-
-
