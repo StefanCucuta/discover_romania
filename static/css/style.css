@@ -189,6 +189,7 @@ body {
 
 .nav-item {
     font-weight:bold;
+    text-transform: uppercase;
 }
 .navbar-light .navbar-nav .nav-link.active{
     color: #000000;

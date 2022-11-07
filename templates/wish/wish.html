@@ -11,10 +11,33 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto"></ul>
-      <form class="form-inline my-2 my-lg-0" method ="POST">
+      <form id="search" class="form-inline my-2 my-lg-0" name="myForm" onsubmit="return validateForm()" method ="POST">
         {% csrf_token %}
-        <input class="form-control mr-sm-2" type="search" placeholder="Add Location" aria-label="Search" name="item">
-        <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Add to list</button>
+        <input class="form-control mr-sm-2" id="myText" type="search" placeholder="Add Location" aria-label="Search" name="item">
+        <br>
+        <button class="btn btn-outline-secondary my-2 my-sm-0 text-light bg-dark" type="submit" id="start_button" disabled="disabled">Add to list</button>
+        <script type="text/javascript">
+          start_button.setAttribute('disable', 'disable')
+
+          search.addEventListener('input', () => {
+            if(myText.value.length > 0 ) {
+            start_button.removeAttribute('disabled');
+          } else {
+            start_button.setAttribute('disabled','disabled');
+          }
+
+          function validateForm() {
+             var x = document.forms["myForm"]["item"].value;
+          if (x == "") {
+              alert("Name must be filled out");
+            return false;
+  }
+}
+
+
+          });
+        </script>
+
       </form>
   </div>
 </nav>
