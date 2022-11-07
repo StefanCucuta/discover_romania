@@ -3,7 +3,7 @@
 
 {% block content%}
 <div>
-    <form action ='' method="POST"  enctype="multipart/form-data">
+    <form action ='' method ="POST"  enctype="multipart/form-data">
         {% csrf_token %}
         {{ form | crispy }}
     <button class= "btn-sm btn-info mb-2" type="submit">New Post</button>
