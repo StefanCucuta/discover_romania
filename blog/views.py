@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse_lazy
-from django.views import generic, View
+from django.views import generic, View 
 from django.http import HttpResponseRedirect
 from .models import Post
 from .forms import CommentForm
@@ -37,7 +37,7 @@ class PostDetail(View):
                 "comment_form": CommentForm()
             },
         )
-
+    
     def post(self, request, slug, *args, **kwargs):
 
         queryset = Post.objects.filter(status=1)
@@ -71,20 +71,20 @@ class PostDetail(View):
 
 
 class PostLike(View):
-
+    
     def post(self, request, slug, *args, **kwargs):
         post = get_object_or_404(Post, slug=slug)
         if post.likes.filter(id=request.user.id).exists():
             post.likes.remove(request.user)
         else:
-            post.likes.add(request.user.id)
+            post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
-# Adding CRUD
+# Adding CRUD 
     # Create a Post
 
-
+    
 class CreatePostView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     """ If user is logged can create a new post """
 
@@ -110,9 +110,11 @@ class UpdatePostView(UserPassesTestMixin, LoginRequiredMixin, SuccessMessageMixi
     success_url = reverse_lazy('home')
     success_message = ("Your Post has been updated")
 
+
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
+
 
     def test_func(self):
         post = self.get_object()
@@ -122,10 +124,9 @@ class UpdatePostView(UserPassesTestMixin, LoginRequiredMixin, SuccessMessageMixi
 
     # Delete a Post
 
-
 class DeletePostView(UserPassesTestMixin, LoginRequiredMixin, SuccessMessageMixin, DeleteView):
     """ If user is logged can delete a his post """
-
+    
     model = Post
     success_url = reverse_lazy('home')
     success_message = ("Your Post has been deleted")

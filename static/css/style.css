@@ -113,6 +113,15 @@ body {
     color: #1B262c;
 }
 
+#delete {
+    margin-top:250px;
+}
+
+.green{
+    padding-left: 10px;
+    margin-left: 15px;
+}
+
 .post-link:hover,
 .page-link {
     color:#213E31;

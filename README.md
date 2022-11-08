@@ -99,19 +99,17 @@
 
   - Hompage displays the Navbar and logo, posts with description and footer with social network links.
   
-     [Hompage - photo 1](screenshot/home_page1.PNG)
-
-     [Hompage - photo 2](screenshot/home_page2.PNG)
+     ![Hompage - photo 1](/readme_documents/screenshot/home_page1.PNG)
 
   #### Navbar
 
   - In loading mode Navar displays : Home, Register and Login
 
-     [Navbar Logged Out - photo ](screenshot/navbar_1.PNG)
+     ![Navbar Logged Out - photo ](/readme_documents/screenshot/navbar_1.PNG)
 
   - In user logged mode Navar displays : Home, Logout and Add Post
 
-     [Navbar Logged In - photo ](screenshot/navbar_2.PNG)
+     ![Navbar Logged In - photo ](/readme_documents/screenshot/navbar_2.PNG)
 
   #### Login
 

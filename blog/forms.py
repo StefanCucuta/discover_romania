@@ -12,6 +12,6 @@ class CommentForm(forms.ModelForm):
 
 
 class BlogForm (forms.ModelForm):
-    class Meta:
+    class Meta: 
         model = Post
         fields = ('title', 'slug', 'content', 'featured_image', 'excerpt',)

@@ -13,7 +13,7 @@
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The featured image URL goes in the src attribute -->
                 {% if "placeholder" in post.featured_image.url %}
-                <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
+                <img src="https://res.cloudinary.com/dak5x9tte/image/upload/v1667818430/DiscoverRomaniaLogo.png" width="100%">
                 {% else %}
                 <img src=" {{ post.featured_image.url }}" width="100%">
                 {% endif %}
@@ -31,8 +31,11 @@
                 <p class="card-text ">
                     {{ post.content | safe }}
                 </p>
+                {% if user.username == post.author.username %}
+                <a href="{% url 'post-update' post.slug %}" class="btn btn-primary"> Update </a>
+                <a href="{% url 'post-delete' post.slug %}" class="btn btn-danger"> Delete </a>
+                {% endif %}
                 <div class="row">
-
                     <div class="col-1">
                         <strong>
                             {% if user.is_authenticated %}

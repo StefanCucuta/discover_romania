@@ -1,11 +1,16 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content%}
-<div>
-    <form action ='' method="POST" id="add" enctype="multipart/form-data">
+  
+<div id="delete" class="container text-center">
+    <label><strong>Are you sure you want to delete the post?</strong></label>
+    <br>
+    <br>
+    <form action ='' method="POST"  enctype="multipart/form-data">
         {% csrf_token %}
-    <button class= "btn-sm btn-info mb-2" type="submit">Delete Post</button>
+    <button class= "btn-sm btn-danger mb-2" type="submit"><strong>Delete</strong></button>
 </form>
+    <a class="navbar-brand" href="{% url 'home' %}"><button class=" green btn-sm btn-success mb-2"><strong>Back</strong></button></a>
 </div>
 
 {% endblock %} -->
