@@ -5,40 +5,41 @@
 
 <nav class="navbar navbar-expand navbar-dark bg-dark">
   <a class="navbar-brand" href=""> Your Next Destination Wish</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-       <span class="navbar-toggler-icon"></span>
-    </button>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto"></ul>
-      <form id="search" class="form-inline my-2 my-lg-0" name="myForm" onsubmit="return validateForm()" method ="POST">
-        {% csrf_token %}
-        <input class="form-control mr-sm-2" id="myText" type="search" placeholder="Add Location" aria-label="Search" name="item">
-        <br>
-        <button class="btn btn-outline-secondary my-2 my-sm-0 text-light bg-dark" type="submit" id="start_button" disabled="disabled">Add to list</button>
-        <script type="text/javascript">
-          start_button.setAttribute('disable', 'disable')
+    <form id="search" class="form-inline my-2 my-lg-0" name="myForm" onsubmit="return validateForm()" method="POST">
+      {% csrf_token %}
+      <input class="form-control mr-sm-2" id="myText" type="search" placeholder="Add Location" aria-label="Search"
+        name="item">
+      <br>
+      <button class="btn btn-outline-secondary my-2 my-sm-0 text-light bg-dark" type="submit" id="start_button"
+        disabled="disabled">Add to list</button>
+      <script type="text/javascript">
+        start_button.setAttribute('disable', 'disable')
 
-          search.addEventListener('input', () => {
-            if(myText.value.length > 0 ) {
+        search.addEventListener('input', () => {
+          if (myText.value.length > 0) {
             start_button.removeAttribute('disabled');
           } else {
-            start_button.setAttribute('disabled','disabled');
+            start_button.setAttribute('disabled', 'disabled');
           }
 
           function validateForm() {
-             var x = document.forms["myForm"]["item"].value;
-          if (x == "") {
+            var x = document.forms["myForm"]["item"].value;
+            if (x == "") {
               alert("Name must be filled out");
-            return false;
-  }
-}
+              return false;
+            }
+          }
+        });
+      </script>
 
-
-          });
-        </script>
-
-      </form>
+    </form>
   </div>
 </nav>
 
@@ -47,10 +48,10 @@
 {% for messages in messages %}
 
 {% comment %} <div class="alert alert-warning alert-dissable" role="alert">
-    <button class="close" data-dismiss="alert"> {% endcomment %}
-        <small><sup>{{ message }}</sup></small>
+  <button class="close" data-dismiss="alert"> {% endcomment %}
+    <small><sup>{{ message }}</sup></small>
     {% comment %} </button>
-    {{ message }} {% endcomment %}
+  {{ message }} {% endcomment %}
 
 </div>
 {% endfor %}
@@ -59,24 +60,36 @@
 {% if my_items %}
 <div class="wish-table">
   <h3>My Wishlist</h3>
-  <table class ="table table-bordered">
-  {% for things in my_items %}
+  <table class="table table-bordered">
+    {% for things in my_items %}
     {% if  things.completed %}
-      <tr>
-        <td class ="table-success">{{ things.item }}</td> 
-        <td class ="table-success"><center><a href="{% url 'uncross' things.id %}">Uncross</a></center></td>
-        <td class ="table-success"><center><a href="{% url 'delete' things.id %}">Delete</a></center></td>
-        <td class ="table-success"><center>{{things.author}}</center></td>
-      </tr>
+    <tr>
+      <td class="table-success">{{ things.item }}</td>
+      <td class="table-success">
+        <center><a href="{% url 'uncross' things.id %}">Uncross</a></center>
+      </td>
+      <td class="table-success">
+        <center><a href="{% url 'delete' things.id %}">Delete</a></center>
+      </td>
+      <td class="table-success">
+        <center>{{things.author}}</center>
+      </td>
+    </tr>
     {% else %}
-      <tr class="table-secondary">
-          <td>{{ things.item }}</td> 
-          <td><center><a href="{% url 'cross_off' things.id %}">Cross Off</a></center></td>
-          <td><center><a href="{% url 'delete' things.id %}">Delete</a></center></td>
-          <td><center>{{things.author}}</center></td>
-      </tr>
+    <tr class="table-secondary">
+      <td>{{ things.item }}</td>
+      <td>
+        <center><a href="{% url 'cross_off' things.id %}">Cross Off</a></center>
+      </td>
+      <td>
+        <center><a href="{% url 'delete' things.id %}">Delete</a></center>
+      </td>
+      <td>
+        <center>{{things.author}}</center>
+      </td>
+    </tr>
     {% endif %}
-  {% endfor %}
+    {% endfor %}
   </table>
 </div>
 {% endif %}
@@ -84,14 +97,16 @@
 {% if all_items %}
 <div class="wish-table">
   <h3>Other Wishlists</h3>
-  <table class ="table table-bordered">
-  {% for things in all_items %}
+  <table class="table table-bordered">
+    {% for things in all_items %}
     <tr>
-      <td class ="stricker">{{ things.item }}</td> 
+      <td class="stricker">{{ things.item }}</td>
       <td>{% if  things.completed %}Completed{% else %}Not completed{% endif %}</td>
-      <td><center>{{things.author}}</center></td>
+      <td>
+        <center>{{things.author}}</center>
+      </td>
     </tr>
-  {% endfor %}
+    {% endfor %}
   </table>
 </div>
 {% endif %}
