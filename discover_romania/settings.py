@@ -29,6 +29,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+ALLOWED_HOSTS = ['discover-romania.herokuapp.com', 'localhost']
+
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 
