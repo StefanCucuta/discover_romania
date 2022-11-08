@@ -1,7 +1,8 @@
-![](screenshot/responsive.PNG)
+![Hero video](readme_documents/mockup/hero_responsive.gif)
 
+# Discover Romania Travel Blog 🇷🇴
 
-**[LIVE DEMO - Click Here]()**
+## [See Live web](https://discover-romania.herokuapp.com/)
 
 
 # Table of Contents
