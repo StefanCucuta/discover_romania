@@ -1,3 +1,5 @@
+
+
 body {
     background-color: #EEF0F4;
 }
@@ -115,6 +117,10 @@ body {
 
 #delete {
     margin-top:250px;
+}
+
+.mobile {
+    padding: 30px 30px 30px 30px;
 }
 
 .green{

@@ -9,7 +9,6 @@
     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto"></ul>
     <form id="search" class="form-inline my-2 my-lg-0" name="myForm" onsubmit="return validateForm()" method="POST">
@@ -42,74 +41,56 @@
     </form>
   </div>
 </nav>
+{% if messages %}
+{% for messages in messages %}
 
-<div style="padding : 20px 20px 20px 20px;" class="d-flex flex-column h-100 main-bg">
-  
- {% if messages %}
- {% for messages in messages %}
-
- {% comment %} <div class="alert alert-warning alert-dissable" role="alert">
-  <button class="close" data-dismiss="alert"> {% endcomment %}
-    <small><sup>{{ message }}</sup></small>
+{% comment %} <div class="alert alert-warning alert-dissable" role="alert">
+    <button class="close" data-dismiss="alert"> {% endcomment %}
+        <small><sup>{{ message }}</sup></small>
     {% comment %} </button>
-  {{ message }} {% endcomment %}
+    {{ message }} {% endcomment %}
 
- </div>
- {% endfor %}
- {% endif %}
+</div>
+{% endfor %}
+{% endif %}
 
- {% if my_items %}
- <div class="wish-table">
-  <h3>Places to visit </h3>
-  <table class="table table-bordered">
-    {% for things in my_items %}
+{% if my_items %}
+<div class="wish-table">
+  <h3>My Wishlist</h3>
+  <table class ="table table-bordered">
+  {% for things in my_items %}
     {% if  things.completed %}
-    <tr>
-      <td class="table-success">{{ things.item }}</td>
-      <td class="table-success">
-        <center><a href="{% url 'uncross' things.id %}">Uncross</a></center>
-      </td>
-      <td class="table-success">
-        <center><a href="{% url 'delete' things.id %}">Delete</a></center>
-      </td>
-      <td class="table-success">
-        <center>{{things.author}}</center>
-      </td>
-    </tr>
+      <tr>
+        <td class ="table-success">{{ things.item }}</td> 
+        <td class ="table-success"><center><a href="{% url 'uncross' things.id %}">Uncross</a></center></td>
+        <td class ="table-success"><center><a href="{% url 'delete' things.id %}">Delete</a></center></td>
+        <td class ="table-success"><center>{{things.author}}</center></td>
+      </tr>
     {% else %}
-    <tr class="table-secondary">
-      <td>{{ things.item }}</td>
-      <td>
-        <center><a href="{% url 'cross_off' things.id %}">Cross Off</a></center>
-      </td>
-      <td>
-        <center><a href="{% url 'delete' things.id %}">Delete</a></center>
-      </td>
-      <td>
-        <center>{{things.author}}</center>
-      </td>
-    </tr>
+      <tr class="table-secondary">
+          <td>{{ things.item }}</td> 
+          <td><center><a href="{% url 'cross_off' things.id %}">Cross Off</a></center></td>
+          <td><center><a href="{% url 'delete' things.id %}">Delete</a></center></td>
+          <td><center>{{things.author}}</center></td>
+      </tr>
     {% endif %}
-    {% endfor %}
+  {% endfor %}
   </table>
- </div>
- {% endif %}
+</div>
+{% endif %}
 
- {% if all_items %}
- <div class="wish-table">
+{% if all_items %}
+<div class="wish-table">
   <h3>Other Wishlists</h3>
-  <table id="tabel" class="table table-bordered">
-    {% for things in all_items %}
+  <table class ="table table-bordered">
+  {% for things in all_items %}
     <tr>
-      <td class="stricker">{{ things.item }}</td>
+      <td class ="stricker">{{ things.item }}</td> 
       <td>{% if  things.completed %}Completed{% else %}Not completed{% endif %}</td>
-      <td>
-        <center>{{things.author}}</center>
-      </td>
+      <td><center>{{things.author}}</center></td>
     </tr>
-    {% endfor %}
+  {% endfor %}
   </table>
- </div>
 </div>
 {% endif %}
 
