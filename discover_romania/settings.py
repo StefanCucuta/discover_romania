@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ['discover-romania.herokuapp.com', 'localhost']
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 # Application definition
 
