@@ -43,22 +43,22 @@
   </div>
 </nav>
 
+<div class="bucket-page" style="padding-top : 20px; padding-left: 50px; padding-right : 50px;">
+ {% if messages %}
+ {% for messages in messages %}
 
-{% if messages %}
-{% for messages in messages %}
-
-{% comment %} <div class="alert alert-warning alert-dissable" role="alert">
+ {% comment %} <div class="alert alert-warning alert-dissable" role="alert">
   <button class="close" data-dismiss="alert"> {% endcomment %}
     <small><sup>{{ message }}</sup></small>
     {% comment %} </button>
   {{ message }} {% endcomment %}
 
-</div>
-{% endfor %}
-{% endif %}
+ </div>
+ {% endfor %}
+ {% endif %}
 
-{% if my_items %}
-<div class="wish-table">
+ {% if my_items %}
+ <div class="wish-table">
   <h3>Places to visit </h3>
   <table class="table table-bordered">
     {% for things in my_items %}
@@ -91,13 +91,13 @@
     {% endif %}
     {% endfor %}
   </table>
-</div>
-{% endif %}
+ </div>
+ {% endif %}
 
-{% if all_items %}
-<div class="wish-table">
+ {% if all_items %}
+ <div class="wish-table">
   <h3>Other Wishlists</h3>
-  <table class="table table-bordered">
+  <table id="tabel" class="table table-bordered">
     {% for things in all_items %}
     <tr>
       <td class="stricker">{{ things.item }}</td>
@@ -108,6 +108,7 @@
     </tr>
     {% endfor %}
   </table>
+ </div>
 </div>
 {% endif %}
 
