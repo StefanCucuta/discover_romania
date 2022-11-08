@@ -31,17 +31,25 @@
                 <p class="card-text ">
                     {{ post.content | safe }}
                 </p>
-                {% if user.username == post.author.username %}
-                <a href="{% url 'post-update' post.slug %}" class="btn btn-primary"> Update </a>
-                <a href="{% url 'post-delete' post.slug %}" class="btn btn-danger"> Delete </a>
-                {% endif %}
                 <div class="row">
 
                     <div class="col-1">
+                        <strong>
+                            {% if user.is_authenticated %}
+                            <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
+                                {% csrf_token %}
+                                {% if liked %}
+                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i class="fas fa-heart"></i></button>
+                                {% else %}
+                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i class="far fa-heart"></i></button>
+                                {% endif %}
+                            </form>
+                            {% else %}
+                            <span class="text-secondary"><i class="far fa-heart"></i></span>
+                            {% endif %}
                         <!-- The number of likes goes before the closing strong tag -->
-                        <form action="{% url 'post_like' post.slug %}" method='POST'> {% csrf_token %}
-                        <button style = "border:none;" type = "submit"><strong class="text-secondary"><i class="far fa-heart"></i> {{ post.number_of_likes }} </strong></button>
-                        </form>
+                        <span class="text-secondary">{{ post.number_of_likes }} </span>
+                        </strong>
                     </div>
                     <div class="col-1">
                         {% with comments.count as total_comments %}
