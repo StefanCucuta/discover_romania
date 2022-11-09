@@ -115,13 +115,13 @@
 
   - When a user presses the Login link a new section will apear at the bottom of the page where he can insert his  account details.
   
-     [Login - photo ](screenshot/sign_in.PNG)
+     ![Login - photo ](/readme_documents/screenshot/sign_in.PNG)
 
   #### Logout
 
   - When a user presses the Logout link a new section will apear at the bottom of the page where he is asked to confirm his action by pressing the Sign Out button .
 
-     [Logout - photo ](screenshot/sign_out.PNG)
+     ![Logout - photo ](/readme_documents/screenshot/sign_out.PNG)
 
   #### Posts
 
@@ -129,38 +129,45 @@
   - When users are adding more posts a new page will be available by pressing the Next button at the bottom of the page.
   - Confirm to users with a message that the post is waiting approval from the admin.
 
-     [Blog Cards - photo ](screenshot/blog_cards.PNG)
+     ![Blog Cards - photo ](/readme_documents/screenshot/blog_cards.PNG)
 
   #### Register as a User
 
   - When a user presses the Register link a new section will appear at the bottom of the page where is asked to introduce their ditails.
 
-     [Register as User - photo ](screenshot/register.PNG)
+     ![Register as User - photo ](/readme_documents/screenshot/register.PNG)
 
   #### Upload New Post
 
   - When a user decide to upload a new post with content and press the New post link a a new section will appear at the bottom of the page where is asked to introduce the content , to upload a photo and press the New Post button to send the post to be approved by the admin.
   - If a photo will not be uploaded a default photo (logo will appear instead).
 
-     [Upload New Post - photo ](screenshot/new_post.PNG)
+     ![Upload New Post - photo ](/readme_documents/screenshot/new_post.PNG)
 
   #### Update a Post
 
   - When a user decide to update a post uploaded by himself and press the chosen post a new page will appear where is asked to choose to update or delete the post.
 
-     [Update a Post - photo ](screenshot/update_post.PNG)
+     ![Update a Post - photo ](/readme_documents/screenshot/update_post.PNG)
 
   #### Comments
 
   - When a user decide to comment a post and press the chosen post a new page will appear where has only the option to add a comment to the post.
 
-     [Comments Section - photo ](screenshot/comments.PNG)
+     ![Comments Section - photo ](/readme_documents/screenshot/comments.PNG)
   
   #### Wish list
 
   - When a user decide to add a place where he want to go and to see othes wish list is pressing on Bucket list in the navbar.
 
-     [Comments Section - photo ](screenshot/wish.PNG)
+     ![Comments Section - photo ](/readme_documents/screenshot/wish.PNG)
+  
+    #### Footer
+
+  - The footer shows the social network links and Copy Rights 
+  
+     ![Footer - photo ](/readme_documents/screenshot/footer.PNG)
+
 
   #### Site Admin Panel
 
@@ -169,7 +176,7 @@
     - I can create drafts and continue to add content later to the posts
     - I can edit and make changes to posts
 
-     [Admin Page - photo ](screenshot/admin.PNG)
+     ![Admin Page - photo ](/readme_documents/screenshot/admin.PNG)
 
   #### Future Features 
 
@@ -177,12 +184,6 @@
   - Google map - location of the post
   - Link location to Trip Advisor
   - Link location to Skyscanner to book a trip.
-
-  #### Footer
-
-  - The footer shows the social network links and Copy Rights 
-  
-     [Footer - photo ](screenshot/footer.)
 
 
   ### Structure
@@ -210,27 +211,27 @@
   #### Mobile
 
 
-  ![Mobile](wireframes/mobile_home.PNG)
+  ![Mobile](/readme_documents/wireframes/mobile_home.PNG)
 
-  ![Mobile](wireframes/mobile_newpost.PNG)
+  ![Mobile](/readme_documents/wireframes/mobile_newpost.PNG)
 
-  ![Mobile](wireframes/mobile_register.PNG)
+  ![Mobile](/readme_documents/wireframes/mobile_register.PNG)
 
-  ![Mobile](wireframes/mobile_signin.PNG)
+  ![Mobile](/readme_documents/wireframes/mobile_signin.PNG)
 
-  ![Mobile](wireframes/mobile_signout.PNG)
+  ![Mobile](/readme_documents/wireframes/mobile_signout.PNG)
 
   #### Desktop
 
-  ![Desktop](wireframes/desk_signout.PNG)
+  ![Desktop](/readme_documents/wireframes/desk_signout.PNG)
 
-  ![Desktop](wireframes/desk_signin.PNG)
+  ![Desktop](/readme_documents/wireframes/desk_signin.PNG)
 
-  ![Desktop](wireframes/desk_register.PNG)
+  ![Desktop](/readme_documents/wireframes/desk_register.PNG)
 
-  ![Desktop](wireframes/desk_hompage.PNG)
+  ![Desktop](/readme_documents/wireframes/desk_hompage.PNG)
   
-  ![Desktop](wireframes/desk_newpost.PNG)
+  ![Desktop](/readme_documents/wireframes/desk_newpost.PNG)
 
   </details>
 
@@ -243,6 +244,8 @@
   - Python
   - HTML
   - CSS
+  - Dockerfile
+  - Procfile
   
   #### Frameworks, Libraries & Programs Used
 
