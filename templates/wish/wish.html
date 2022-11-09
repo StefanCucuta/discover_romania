@@ -4,7 +4,6 @@
 
 
 <nav class="navbar navbar-expand navbar-dark bg-dark">
-  <a class="navbar-brand" href="{% url 'home' %}"><button class="btn-sm btn-info mb-2">Back</button> </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -13,7 +12,7 @@
     <ul class="navbar-nav mr-auto"></ul>
     <form id="search" class="form-inline my-2 my-lg-0" name="myForm" onsubmit="return validateForm()" method="POST">
       {% csrf_token %}
-      <input class="form-control mr-sm-2" id="myText" type="search" placeholder="Add Location" aria-label="Search"
+      <input class="form-control mr-sm-2 w-50 p-3" id="myText" type="search" placeholder="Location" aria-label="Search"
         name="item">
       <br>
       <button class="btn btn-outline-secondary my-2 my-sm-0 text-light bg-dark" type="submit" id="start_button"
