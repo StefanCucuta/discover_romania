@@ -195,7 +195,7 @@
   #### Colour Palette
  -  [Abode Color]( https://color.adobe.com/search?q=897B70&t=hex) was used to extract the main colours for the website:
   
-    ![](screenshot/colors.PNG)
+    ![](/readme_documents/mockup/colors.PNG)
 
   ### Skeleton
   - Wireframes created with Balsamiq
@@ -282,25 +282,25 @@
 
    - Lighthouse 
   
-  ![](screenshot/accessibility.PNG)
+  ![](/readme_documents/tests/accessibility.PNG)
 
   * HTML
   
     - No errors were returned when passing through the official [w3c html validator](https://validator.w3.org/).
   
-  ![](screenshot/w3errors2.PNG)
+  ![](/readme_documents/tests/w3errors2.PNG)
 
   * CSS
   
     - No errors were returned when passing through the official [w3c jigsaw validator](https://jigsaw.w3.org/css-validator/).
   
-  ![](screenshot/css_validator.PNG)
+  ![](/readme_documents/tests/css_validator.PNG)
 
   * Accessability
 
     - Accessibility was tested with both Chrome Lighthouse [a11y contrast checker](https://color.a11y.com/)  and no issues were found.
     
-   ![](screenshot/contrast.PNG)
+   ![](/readme_documents/tests/contrast.PNG)
 
 
   * PEP8 - No bugs found
@@ -308,11 +308,11 @@
   <details>
   <summary>Click to see the Screenshots</summary>
 
-  ![](screenshot/pep81.PNG)
+  ![](/readme_documents/tests/pep81.PNG)
 
-  ![](screenshot/pep82.PNG)
+  ![](/readme_documents/tests/pep82.PNG)
 
-  ![](screenshot/pep38.PNG)
+  ![](/readme_documents/tests/pep38.PNG)
   
   </details>
 
